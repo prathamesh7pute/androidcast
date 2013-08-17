@@ -25,17 +25,17 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Android Receiver</title>
         <script type="text/javascript" src="phonegap.js"></script>
-        <script src="js/cast_receiver.js">
+        <script type="text/javascript" src="js/cast_receiver.js">
         </script>
         <script type="text/javascript">
 
             var receiver = new cast.receiver.Receiver(
-                'com.a-1.android.cast', [cast.receiver.RemoteMedia.desi],
+                'com.a-1.androidcast', [cast.receiver.RemoteMedia.androidcast],
                 "",
                 5);
             var remoteMedia = new cast.receiver.RemoteMedia();
             remoteMedia.addChannelFactory(
-                receiver.createChannelFactory(cast.receiver.RemoteMedia.desi));
+                receiver.createChannelFactory(cast.receiver.RemoteMedia.androidcast));
 
             receiver.start();
 
@@ -47,6 +47,7 @@
         </script>
     </head>
     <body>
+      <b>Content......</b>
       <video id="vid" style="position:absolute;top:0;left:0;height:100%;width:100%" />
     </body>
 
